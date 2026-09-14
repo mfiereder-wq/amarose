@@ -444,6 +444,21 @@ section{padding:clamp(70px,9vw,130px) 0;position:relative}
 .usp-visual img{width:100%;height:100%;object-fit:cover}
 
 /* ====================================
+   WELLNESS
+==================================== */
+.wellness{background:var(--rose-soft)}
+.wellness-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center}
+.wellness-visual{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-lg)}
+.wellness-visual img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.wellness-visual:hover img{transform:scale(1.04)}
+.wellness-services{list-style:none;margin:30px 0;display:grid;gap:12px}
+.wellness-services li{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line);font-size:.95rem;color:var(--ink)}
+.wellness-services li:last-child{border-bottom:none}
+.wellness-services .svc-name{font-weight:500;color:var(--plum)}
+.wellness-services .svc-price{font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold-deep);font-weight:600;white-space:nowrap;margin-left:16px}
+@media(max-width:900px){.wellness-grid{grid-template-columns:1fr;gap:40px}.wellness-visual{max-height:400px}}
+
+/* ====================================
    PROCESS
 ==================================== */
 .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;position:relative}
@@ -726,6 +741,7 @@ section{padding:clamp(70px,9vw,130px) 0;position:relative}
   <li><a href="#services">Services</a></li>
   <li><a href="#afro">Afro</a></li>
   <li><a href="#pricing">Preise</a></li>
+  <li><a href="#wellness">Wellness</a></li>
   <li><a href="#gallery">Galerie</a></li>
   <li><a href="#reviews">Stimmen</a></li>
   <li><a href="#visit">Kontakt</a></li>
@@ -1224,6 +1240,47 @@ section{padding:clamp(70px,9vw,130px) 0;position:relative}
   </div>
 </section>
 
+<!-- WELLNESS -->
+<section id="wellness" class="wellness" aria-labelledby="wellness-h">
+  <div class="container">
+    <div class="wellness-grid">
+      <div class="about-text reveal">
+        <span class="eyebrow">Wellness &amp; Entspannung</span>
+        <h2 id="wellness-h">Deine Auszeit <span class="italic">bei Amarose.</span></h2>
+        <p class="lead">Entdecke wohltuende Massagen und Beauty-Behandlungen im Herzen von Zürich. Gönn dir einen Moment der Ruhe, Entspannung und persönlichen Pflege.</p>
+        <ul class="wellness-services">
+          <li>
+            <span class="svc-name">Lymphdrainage-Massage</span>
+            <span class="svc-price">80 Fr.</span>
+          </li>
+          <li>
+            <span class="svc-name">Entspannungsmassage mit Kräuterstempeln<br><small style="font-weight:400;color:var(--grey)">1 Std. 20 Min.</small></span>
+            <span class="svc-price">100 Fr.</span>
+          </li>
+          <li>
+            <span class="svc-name">Verspannungslösende Massage</span>
+            <span class="svc-price">ab 50 Fr.</span>
+          </li>
+          <li>
+            <span class="svc-name">Haarentfernung mit Wachs</span>
+            <span class="svc-price">Auf Anfrage</span>
+          </li>
+          <li>
+            <span class="svc-name">Gesichtsreinigung Basic</span>
+            <span class="svc-price">50 Fr.</span>
+          </li>
+        </ul>
+        <a href="https://wa.me/41791239078?text=Hallo%20Aly,%20ich%20m%C3%B6chte%20einen%20Wellness-Termin%20buchen." class="btn btn--gold">Jetzt Termin sichern
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="wellness-visual reveal reveal-d1">
+        <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1789425788/693d7a30-b08d-11f1-87c7-2fa7813cc8cf_s1fgff.png" alt="Wellness und Massage bei AmaRose Zürich Kreis 4" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- GALLERY -->
 <section id="gallery" aria-labelledby="gal-h">
   <div class="container">
@@ -1497,6 +1554,7 @@ section{padding:clamp(70px,9vw,130px) 0;position:relative}
         <h4>Studio</h4>
         <ul>
           <li><a href="#about">Über Aly</a></li>
+          <li><a href="#wellness">Wellness &amp; Massage</a></li>
           <li><a href="#gallery">Galerie</a></li>
           <li><a href="#reviews">Bewertungen</a></li>
           <li><a href="#faq">FAQ</a></li>
