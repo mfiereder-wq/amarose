@@ -179,6 +179,43 @@
       .hero-image { display: none; }
       .header-inner { height: auto; padding: 14px 0; flex-wrap: wrap; }
     }
+  
+    .hero-img-strip {
+      width: 100%;
+      max-height: 420px;
+      overflow: hidden;
+      margin: 0;
+    }
+    .hero-img-strip img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .trust-with-img {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .trust-photo {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(61,31,42,.12);
+      aspect-ratio: 4/5;
+    }
+    .trust-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media(max-width: 768px) {
+      .hero-img-strip img { height: 260px; }
+      .trust-with-img { grid-template-columns: 1fr; }
+      .trust-photo { aspect-ratio: 3/2; }
+    }
+
   </style>
 </head>
 <body>
@@ -267,6 +304,12 @@
 
   <section class="trust-section">
     <div class="section-inner">
+      <div class="trust-with-img">
+        
+      <div class="trust-photo">
+        <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1779284704/Screenshot_20260520-154311_gflqj7.png" alt="Damenhaarschnitt Coloration Coiffeur Langstrasse Zürich" loading="lazy" decoding="async">
+      </div>
+        <div>
       <h2 class="section-title">Ihr Coiffeur nahe der Langstrasse</h2>
       <p class="section-subtitle">Drei Gründe, warum die Zürcherinnen AmaRose wählen.</p>
       <div class="trust-grid">
@@ -285,6 +328,8 @@
           <h3>Direkt bei der Langstrasse, Kreis 4</h3>
           <p>Dienerstrasse 7, 8004 Zürich – fünf Minuten von der Langstrasse, ideal erreichbar mit ÖV. Mo–Sa 10–19 Uhr.</p>
         </div>
+      </div>
+    </div>
       </div>
     </div>
   </section>

@@ -380,6 +380,43 @@
       .header-inner { height: auto; padding: 14px 0; flex-wrap: wrap; }
       .hero { padding: 52px 20px 48px; }
     }
+  
+    .hero-img-strip {
+      width: 100%;
+      max-height: 420px;
+      overflow: hidden;
+      margin: 0;
+    }
+    .hero-img-strip img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .trust-with-img {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .trust-photo {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(61,31,42,.12);
+      aspect-ratio: 4/5;
+    }
+    .trust-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media(max-width: 768px) {
+      .hero-img-strip img { height: 260px; }
+      .trust-with-img { grid-template-columns: 1fr; }
+      .trust-photo { aspect-ratio: 3/2; }
+    }
+
   </style>
 </head>
 <body>
@@ -441,6 +478,12 @@
   <!-- TRUST -->
   <section class="trust-section">
     <div class="section-inner">
+      <div class="trust-with-img">
+        
+      <div class="trust-photo">
+        <img src="https://res.cloudinary.com/dtzpydtdg/image/upload/v1779284789/IMG-20260514-WA0049_urqkos.jpg" alt="Nail Art und GelLack Maniküre Zürich AmaRose" loading="lazy" decoding="async">
+      </div>
+        <div>
       <h2 class="section-title">Warum AmaRose für Ihre Maniküre in Zürich?</h2>
       <p class="section-subtitle">Drei gute Gründe, uns Ihre Hände anzuvertrauen.</p>
       <div class="trust-grid">
@@ -459,6 +502,8 @@
           <h3>Mitten in Zürich Kreis 4</h3>
           <p>Dienerstrasse 7, direkt im Herzen von Kreis 4 nahe der Langstrasse. Gut erreichbar mit ÖV, Mo–Sa von 10 bis 19 Uhr geöffnet.</p>
         </div>
+      </div>
+    </div>
       </div>
     </div>
   </section>
